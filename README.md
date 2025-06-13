@@ -96,13 +96,13 @@ Please fork the repository and use a feature branch. Pull requests are welcome.
 
 ## License
 
-PeSPr is MIT licensed. See [LICENSE](LICENSE) for more details.
+PeSPr is licensed under the MIT license; see [LICENSE](LICENSE) for more information.
 
 ## Contact
 
 - **Author**: Tyler Zervas
-- **GitLab**: [https://github.com/tzervas]
-- **X**: [https://x.com/vec_wt_tech]
+- **GitLab**: [tzervas](https://github.com/tzervas)
+- **X**: [@vec_wt_tech](https://x.com/vec_wt_tech)
 
 ## Acknowledgments
 
