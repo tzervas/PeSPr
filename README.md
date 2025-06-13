@@ -84,7 +84,7 @@ ci_integration:
 
 ## Contributing
 
-I welcome contributions! Please see my [Contributing Guide](CONTRIBUTING.md) for more details.
+Please fork the repository and use a feature branch. Pull requests are welcome.
 
 ## Roadmap
 
