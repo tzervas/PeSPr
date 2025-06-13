@@ -4,7 +4,7 @@
 
 PeSPr (Perihelion Signal Processor) is a sister project to [DynEL (Dynamic Error Logging)](https://gitlab.com/DynEL/DynEL), aimed at enhancing and automating the error handling, recovery, propagation management, and logging processes in Python projects. By leveraging static code analysis and integrating with existing open-source tools, PeSPr extracts crucial information from target projects to generate accurate and dynamic DynEL configuration files.
 
-This is an extremely early phase development project, and all contents of the README.md are tentative at this time.
+This is an early development project, and all contents are subject to change.
 
 ## Key Features
 
@@ -84,7 +84,7 @@ ci_integration:
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more details.
+I welcome contributions! Please see my [Contributing Guide](CONTRIBUTING.md) for more details.
 
 ## Roadmap
 
@@ -101,8 +101,8 @@ PeSPr is MIT licensed. See [LICENSE](LICENSE) for more details.
 ## Contact
 
 - **Author**: Tyler Zervas
-- **Email**: albedo.black.1@gmail.com
-- **GitLab**: [https://gitlab.com/albedo_black]
+- **GitLab**: [https://github.com/tzervas]
+- **X**: [https://x.com/vec_wt_tech]
 
 ## Acknowledgments
 
@@ -112,4 +112,4 @@ PeSPr builds upon several excellent open-source projects:
 - [Loguru](https://github.com/Delgan/loguru)
 - [pytest](https://github.com/pytest-dev/pytest)
 
-We're grateful to the maintainers and contributors of these projects for their fantastic work.
+I'm grateful to the maintainers and contributors of these projects for their fantastic work.
