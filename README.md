@@ -8,7 +8,7 @@
 - Automate error handling and logging configuration
 - Improve error propagation and control flow
 - Integrate with CI/CD pipelines and IDEs
-- Optimize performance for scalability
+- Optimize performance for scalability with Mojo language integration
 
 ## Table of Contents
 
@@ -73,6 +73,7 @@ pespr update-config /path/to/your/project
 - **Logging**: Advanced formatting and outputs via Loguru
 - **CI/CD Integration**: Automates config generation in pipelines
 - **Extensibility**: Supports custom error handlers and plugins
+- **Mojo Performance**: High-performance model operations using Mojo language for critical paths
 
 ## Configuration
 
@@ -116,8 +117,14 @@ Install development dependencies first (see [Development Setup](#development-set
    ```bash
    uv sync
    ```
-4. Configure via `pespr_config.yaml` or environment variables.
-5. Run the application:
+4. (Optional) Install Mojo for high-performance operations:
+   ```bash
+   curl -s https://get.modular.com | sh -
+   modular install mojo
+   ```
+   See [Mojo Integration Guide](docs/mojo_integration.md) for details.
+5. Configure via `pespr_config.yaml` or environment variables.
+6. Run the application:
    ```bash
    python main.py
    ```

@@ -11,6 +11,7 @@ PeSPr automates error handling and logging configuration for Python projects by 
 - Python 3.11+
 - UV (recommended for dependency management)
 - Git
+- Mojo SDK (optional, for high-performance operations)
 
 ### Cloning the Repository
 
@@ -31,6 +32,23 @@ Or use pip:
 pip install -r requirements.txt
 ```
 
+### Installing Mojo (Optional)
+
+For high-performance model operations, install the Mojo SDK:
+
+```bash
+# Install Modular CLI
+curl -s https://get.modular.com | sh -
+
+# Install Mojo SDK
+modular install mojo
+
+# Verify installation
+mojo --version
+```
+
+See the [Mojo Integration Guide](mojo_integration.md) for detailed setup and usage.
+
 ### Configuring the Environment
 
 Edit `pespr_config.yaml` or set environment variables. See [Configuration Guide](docs/configuration.md).
@@ -38,15 +56,21 @@ Edit `pespr_config.yaml` or set environment variables. See [Configuration Guide]
 ## Project Structure
 
 - **`src/`**: Core source code
+  - **`pespr/`**: Python modules
+  - **`pespr_mojo/`**: Mojo performance modules (optional)
 - **`tests/`**: Unit and integration tests
 - **`docs/`**: Documentation
 - **`config/`**: Configuration files
 
 ### Key Modules
 
-- **`analyze.py`**: Static analysis logic
+- **`analyze.py`**: Static analysis logic (with optional Mojo acceleration)
 - **`config_generator.py`**: DynEL config generation
 - **`error_catalog.py`**: Error registry management
+- **Mojo modules** (optional):
+  - **`ast_analyzer.mojo`**: High-performance AST analysis
+  - **`type_checker.mojo`**: Accelerated type checking
+  - **`pattern_matcher.mojo`**: Fast pattern matching
 
 ## Development Workflow
 
@@ -114,3 +138,37 @@ Optimize analysis with caching and parallelism.
 
 - Add tools to `analyze.py`
 - Extend `error_catalog.py` for custom handlers
+- Implement performance-critical operations in Mojo (see [Mojo Integration Guide](mojo_integration.md))
+
+## Working with Mojo
+
+### When to Use Mojo
+- Performance-critical AST operations
+- Large-scale static analysis
+- Type inference bottlenecks
+- Pattern matching hot paths
+
+### Mojo Development Workflow
+1. Profile Python code to identify bottlenecks
+2. Implement critical path in Mojo
+3. Create Python bindings
+4. Add tests and benchmarks
+5. Validate performance improvements
+
+### Example: Migrating a Function to Mojo
+
+Python version:
+```python
+def count_exceptions(file_path: str) -> int:
+    # Slow Python implementation
+    pass
+```
+
+Mojo version:
+```mojo
+fn count_exceptions(file_path: String) -> Int:
+    # Fast Mojo implementation with SIMD
+    pass
+```
+
+See [Mojo Integration Guide](mojo_integration.md) for comprehensive examples.
