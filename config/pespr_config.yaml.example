@@ -1,0 +1,83 @@
+# Analysis configuration
+analysis:
+  # Directories to ignore during analysis
+  ignore_dirs:
+    - tests
+    - docs
+    - .git
+    - __pycache__
+    - .venv
+    - venv
+  
+  # Maximum depth for directory traversal
+  max_depth: 5
+  
+  # File patterns to include
+  include_patterns:
+    - "*.py"
+  
+  # File patterns to exclude
+  exclude_patterns:
+    - "test_*.py"
+    - "*_test.py"
+
+# Logging configuration
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: INFO
+  
+  # Log outputs
+  output:
+    - console
+    - file
+  
+  # Log file path (when output includes 'file')
+  log_file: pespr.log
+  
+  # Log format
+  format: "json"
+
+# CI/CD integration settings
+ci_integration:
+  # Enable CI/CD integration
+  enabled: true
+  
+  # Report format: json, yaml, text
+  report_format: json
+  
+  # Fail on errors
+  fail_on_error: false
+  
+  # Output report path
+  report_path: pespr_report.json
+
+# Static analysis configuration
+static_analysis:
+  # Enable Mypy
+  mypy_enabled: true
+  
+  # Enable Astroid
+  astroid_enabled: true
+  
+  # Mypy configuration
+  mypy_options:
+    - "--strict"
+    - "--no-error-summary"
+
+# Dynamic analysis configuration
+dynamic_analysis:
+  # Enable pytest integration
+  pytest_enabled: true
+  
+  # Test directory
+  test_dir: tests
+
+# Error handling configuration
+error_handling:
+  # Default error severity
+  default_severity: MEDIUM
+  
+  # Custom error categories
+  custom_categories:
+    - api_error
+    - database_error
