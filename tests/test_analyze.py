@@ -98,9 +98,9 @@ def example_function():
     results = analyzer.analyze()
     
     # Should extract all exception types from the tuple
-    assert "ValueError" in str(results["exception_types"])
-    assert "TypeError" in str(results["exception_types"])
-    assert "KeyError" in str(results["exception_types"])
+    assert "ValueError" in results["exception_types"]
+    assert "TypeError" in results["exception_types"]
+    assert "KeyError" in results["exception_types"]
 
 
 def test_exception_extraction_custom_exceptions(tmp_path: Path) -> None:

@@ -8,7 +8,6 @@ This module provides functionality to analyze Python projects for:
 - AST analysis with Astroid
 """
 
-import ast
 from pathlib import Path
 from typing import Dict, List, Any, Set, Optional
 from loguru import logger
@@ -98,12 +97,20 @@ class ExceptionExtractor:
         if node.type:
             exception_type = self._get_exception_type(node.type)
             if exception_type:
-                self.exception_types.add(exception_type)
+                # Handle both single exception and list of exceptions
+                if isinstance(exception_type, list):
+                    for exc_type in exception_type:
+                        self.exception_types.add(exc_type)
+                    exception_type_str = ", ".join(exception_type)
+                else:
+                    self.exception_types.add(exception_type)
+                    exception_type_str = exception_type
+                    
                 self.error_locations.append({
                     "file": str(file_path),
                     "line": node.lineno,
                     "type": "except",
-                    "exception": exception_type,
+                    "exception": exception_type_str,
                 })
 
     def _handle_function_def(self, node: nodes.FunctionDef, file_path: Path) -> None:
@@ -150,7 +157,8 @@ class ExceptionExtractor:
                     exc_type = self._get_exception_type(elt)
                     if exc_type:
                         types.append(exc_type)
-                return ", ".join(types) if types else None
+                # Return list or None for consistency
+                return types if types else None
         except Exception as e:
             logger.debug(f"Error extracting exception type: {e}")
         return None

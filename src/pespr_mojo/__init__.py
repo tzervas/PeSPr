@@ -17,7 +17,7 @@ try:
     # from . import ast_analyzer_mojo
     # from . import type_checker_mojo
     # from . import pattern_matcher_mojo
-    _MOJO_AVAILABLE = True
+    _MOJO_AVAILABLE = False  # Will be True when Mojo modules are implemented
 except ImportError:
     _MOJO_AVAILABLE = False
 
