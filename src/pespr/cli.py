@@ -149,7 +149,7 @@ def create_parser() -> argparse.ArgumentParser:
     # Generate-config command
     generate_parser = subparsers.add_parser(
         "generate-config",
-        help="Generate a DynEL configuration file",
+        help="Generate a DynEL configuration file for error handling integration",
     )
     generate_parser.add_argument(
         "project_path",
@@ -166,7 +166,7 @@ def create_parser() -> argparse.ArgumentParser:
     # Update-config command
     update_parser = subparsers.add_parser(
         "update-config",
-        help="Update an existing DynEL configuration file",
+        help="Update an existing DynEL configuration file for error handling",
     )
     update_parser.add_argument(
         "project_path",

@@ -2,6 +2,8 @@
 Configuration generator module for PeSPr.
 
 This module generates DynEL configuration files based on project analysis.
+PeSPr analyzes Python projects and creates configuration files for DynEL
+(Dynamic Error Logging) to automate error handling and logging setup.
 """
 
 from pathlib import Path
