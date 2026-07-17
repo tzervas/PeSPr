@@ -1,5 +1,10 @@
 # Perihelion Signal Processor (PeSPr)
 
+<!-- FLEET-BADGES:BEGIN -->
+[![CI](https://github.com/tzervas/PeSPr/actions/workflows/fleet-ci.yml/badge.svg?branch=main)](https://github.com/tzervas/PeSPr/actions/workflows/fleet-ci.yml?query=branch%3Amain)
+[![Security](https://github.com/tzervas/PeSPr/actions/workflows/fleet-security.yml/badge.svg?branch=main)](https://github.com/tzervas/PeSPr/actions/workflows/fleet-security.yml?query=branch%3Amain)
+<!-- FLEET-BADGES:END -->
+
 🚀 **Project Status**: In active development. All components subject to change. Contributions and feedback welcome.
 
 🎯 **Intent**: Enhance and automate error handling, recovery, propagation management, and logging in Python projects by integrating static and dynamic analysis with tools like DynEL.
